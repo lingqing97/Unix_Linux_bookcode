@@ -1,4 +1,4 @@
-objects=tinybc timeserv timeclnt
+objects=tinybc timeserv timeclnt rls rlsd
 
 all:$(objects)
 .PHONY:all clean
@@ -14,3 +14,9 @@ timeserv: timeserv.c
 
 timeclnt: timeclnt.c
 	cc timeclnt.c -o timeclnt -w
+
+rls: rls.c
+	cc rls.c -o rls -w -g
+
+rlsd: rlsd.c
+	cc rlsd.c -o rlsd -w -g
